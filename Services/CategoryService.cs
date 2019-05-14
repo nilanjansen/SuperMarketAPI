@@ -16,9 +16,9 @@ namespace Supermarket.API.Services
             this._categoryRepository = categoryRespository;
         }
 
-        public Task<IEnumerable<Category>> ListAsync()
+        public async Task<IEnumerable<Category>> ListAsync()
         {
-            throw new NotImplementedException();
+            return await _categoryRepository.ListAsync();
         }
     }
 }
