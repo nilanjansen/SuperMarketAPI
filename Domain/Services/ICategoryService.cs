@@ -1,4 +1,5 @@
 ﻿using Supermarket.API.Domain.Models;
+using Supermarket.API.Domain.Services.Communication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace Supermarket.API.Domain.Services
         //fact that we have to wait for the database to complete some operation to return the data, and this process can take 
         //a while. 
         Task<IEnumerable<Category>> ListAsync();
+        Task<SaveCategoryResponse> SaveAsync(Category category);
     }
 }
