@@ -15,6 +15,8 @@ namespace Supermarket.API.Domain.Services
         //fact that we have to wait for the database to complete some operation to return the data, and this process can take 
         //a while. 
         Task<IEnumerable<Category>> ListAsync();
-        Task<SaveCategoryResponse> SaveAsync(Category category);
+        Task<CategoryResponse> SaveAsync(Category category);
+        Task<CategoryResponse> UpdateAsync(int id, Category category);
+        Task<CategoryResponse> DeleteAsync(int id);
     }
 }

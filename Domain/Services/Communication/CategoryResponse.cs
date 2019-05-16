@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Supermarket.API.Domain.Services.Communication
 {
-    public class SaveCategoryResponse:BaseResponse
+    public class CategoryResponse:BaseResponse
     {
         public Category Category { get; private set; }
-        public SaveCategoryResponse(bool success,string message,Category category):base(success,message)
+        public CategoryResponse(bool success,string message,Category category):base(success,message)
         {
             Category = category;
         }
@@ -18,7 +18,7 @@ namespace Supermarket.API.Domain.Services.Communication
         /// </summary>
         /// <param name="category">Saved Category</param>
         /// <returns>Response</returns>
-        public SaveCategoryResponse(Category category):this(true,string.Empty,category)
+        public CategoryResponse(Category category):this(true,string.Empty,category)
         {
 
         }
@@ -27,7 +27,7 @@ namespace Supermarket.API.Domain.Services.Communication
         /// </summary>
         /// <param name="message">Error Message</param>
         /// <returns>Response.</returns>
-        public SaveCategoryResponse(string message):this(false,message,null)
+        public CategoryResponse(string message):this(false,message,null)
         {
 
         }
