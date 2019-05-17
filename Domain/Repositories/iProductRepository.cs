@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Supermarket.API.Domain.Repositories
 {
-    public interface iProductRepository
+    public interface IProductRepository
     {
         Task<IEnumerable<Product>> ListAsync();
     }

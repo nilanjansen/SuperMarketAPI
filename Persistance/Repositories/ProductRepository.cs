@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Supermarket.API.Persistance.Repositories
 {
-    public class ProductRepository:BaseRepository,iProductRepository
+    public class ProductRepository:BaseRepository,IProductRepository
     {
         public ProductRepository(AppDbContext context) : base(context) { }
         public async Task<IEnumerable<Product>> ListAsync()
