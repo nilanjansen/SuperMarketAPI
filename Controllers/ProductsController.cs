@@ -22,7 +22,7 @@ namespace Supermarket.API.Controllers
             _productService = productService;
             _mapper = mapper;
         }
-        [HttpGet]
+        [HttpGet]                      
         public async Task<IEnumerable<ProductResource>> ListAsync()
         {
             var products = await _productService.ListAsync();
